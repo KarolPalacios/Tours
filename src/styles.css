@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: #fefae0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* LOADING */
+
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #bc6c25;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/* -------------------------------- */
+
+.tours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 3rem;
+}
+
+.sidebar {
+  width: 7rem;
+  border: 2.5px solid #bc6c25;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.tours-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+/* ------------------ */
+
+
+.single-tour {
+  max-width: 352px;
+  position: relative;
+  border: 1px solid rgb(211, 205, 205);
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 3px #dda15e;
+}
+
+.single-tour img {
+  width: 350px;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.tour-price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #bc6c25;
+  color: #fff;
+  padding: 1.5px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.tour-info {
+  padding: 1rem;
+}
+
+.tour-info h3 {
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.tour-description {
+  color: #6c757d;
+  font-size: 15px;
+}
+
+.tour-description button {
+  border: none;
+  background-color: transparent;
+  color: #bc6c25;
+  font-weight: 600;
+}
+
+.tour-delete {
+  margin-top: 1rem;
+  width: 100%;
+  height: 2rem;
+  background-color: transparent;
+  border: 1px solid #bc6c25;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14.5px;
+  letter-spacing: 0.5px;
+  color: #bc6c25;
+  font-weight: 600;
+}
+
+.tour-delete:hover {
+  background-color: #bc6c25;
+  color: #fff;
+}
+
+/* ---------------- */
+
+.no-tours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-tours h2 {
+  margin-top: 3rem;
+  font-size: 25px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  color: #bc6c25;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .tours-container {
+    grid-template-columns: 1fr;
+  }
+}
